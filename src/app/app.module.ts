@@ -3,11 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CategoryComponent } from './category/category.component';
+import { MoviesComponent } from './movies/movies.component';
+import { MovieComponent } from './movies/movie/movie.component';
+import { FooterComponent } from './footer/footer.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [BrowserModule, FormsModule],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    CategoryComponent,
+    MoviesComponent,
+    MovieComponent,
+    FooterComponent,
+    MovieDetailsComponent,
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
