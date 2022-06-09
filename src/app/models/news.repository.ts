@@ -35,4 +35,13 @@ export class NewsRepository {
       },
     ];
   }
+  GetNews(): News[] {
+    return this.news_array;
+  }
+  AddNews(news: News) {
+    this.news_array.push(news);
+  }
+  DeleteNews(news: News) {
+    this.news_array.splice(news.Id, 1);
+  }
 }

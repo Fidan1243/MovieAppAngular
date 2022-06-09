@@ -9,6 +9,8 @@ import { MoviesComponent } from './movies/movies.component';
 import { MovieComponent } from './movies/movie/movie.component';
 import { FooterComponent } from './footer/footer.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { NewsRepository } from './models/news.repository';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -20,6 +22,7 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
     MovieComponent,
     FooterComponent,
     MovieDetailsComponent,
+    NewsComponent,
   ],
   bootstrap: [AppComponent],
 })
