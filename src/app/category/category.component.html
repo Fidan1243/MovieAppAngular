@@ -1,6 +1,10 @@
 <div class="list-group">
-  <a href="" class="list-group-item list-group-item-action active">Adventure</a>
-  <a href="" class="list-group-item list-group-item-action">Romantic</a>
-  <a href="" class="list-group-item list-group-item-action">Dram</a>
-  <a href="" class="list-group-item list-group-item-action">Sci-Fi</a>
+  <a
+    href=""
+    *ngFor="let c of categories"
+    (click)="IdDefined(c.Id)"
+    class="list-group-item list-group-item-action"
+    [ngClass]="GetClasses(c.Id)"
+    >{{ c.name }}</a
+  >
 </div>
