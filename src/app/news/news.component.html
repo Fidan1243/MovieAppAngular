@@ -1,11 +1,11 @@
-<div class="card mb-3" *ngFor="let item of categories">
+<div class="card m-3" *ngFor="let item of categories">
   <div class="row">
     <div class="col-md-3">
       <img src="{{ item.imageUrl }}" alt="" class="img-fluid rounded-start" />
     </div>
     <div class="col-md-9">
       <div class="card-body">
-        <h2 class="card-title">{{ item.title }}</h2>
+        <h4 class="card-title">{{ item.title }}</h4>
         <p class="card-text">{{ item.description }}</p>
         <button
           (click)="Delete(item.Id)"
