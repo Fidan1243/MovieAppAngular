@@ -4,4 +4,5 @@ export interface News {
   authors: string;
   CreatedDate: Date;
   MovieId: number;
+  imageUrl: string;
 }

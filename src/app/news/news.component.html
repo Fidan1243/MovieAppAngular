@@ -1,17 +1,47 @@
-<div class="card m-3" *ngFor="let item of categories">
-  <div class="row">
-    <div class="col-md-3">
-      <img src="{{ item.imageUrl }}" alt="" class="img-fluid rounded-start" />
+<div class="container">
+  <div class="card mb-3 mt-3" *ngFor="let item of categories">
+    <div class="row">
+      <div class="col-md-5">
+        <img src="{{ item.imageUrl }}" alt="" class="img-fluid rounded-start" />
+      </div>
+      <div class="col-md-6">
+        <div class="card-body">
+          <h6 class="card-title">{{ item.title }}</h6>
+          <p class="card-text">{{ item.authors }}</p>
+          <button
+            (click)="Delete(item.Id)"
+            class="btn btn-sm btn-outline-primary"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="col-md-9">
-      <div class="card-body">
-        <h4 class="card-title">{{ item.title }}</h4>
-        <p class="card-text">{{ item.description }}</p>
+  </div>
+  <div>
+    <div class="row mb-3 mt-5">
+      <div class="col">
+        <input #title type="text" class="form-control" placeholder="Title" />
+      </div>
+      <div class="col">
+        <input #author type="text" class="form-control" placeholder="Authors" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input
+          #movieId
+          type="number"
+          class="form-control"
+          placeholder="Movie Id"
+        />
+      </div>
+      <div class="col">
         <button
-          (click)="Delete(item.Id)"
-          class="btn btn-sm btn-outline-primary"
+          (click)="AddNews(title, author, movieId)"
+          class="btn btn-outline-primary"
         >
-          Delete
+          Add
         </button>
       </div>
     </div>
